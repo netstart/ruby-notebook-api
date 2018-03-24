@@ -23,9 +23,14 @@ rake é depecated, pode usar rails no lugar
 $ rails db:migrate
 $ rails s
 
+
+
+
 Para fazer bind quando está em um vagrant
 
 $ rails s -b 0.0.0.0  
+
+
 
 Gem github.com/stympy/fake
 
