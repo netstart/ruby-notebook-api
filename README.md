@@ -47,3 +47,5 @@ rails g scaffold Kind description:string
 
 rails db:drop db:create db:migrate dev:setup
 rails db:setup no luga de db:drop e db:create
+
+

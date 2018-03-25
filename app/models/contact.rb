@@ -1,7 +1,21 @@
 class Contact < ApplicationRecord
   belongs_to :kind
+  has_many :phones
 
 
+
+  # def to_br
+  #   {
+  #       name: self.name,
+  #       birthdate: (I18n.l(self.bithdate) unless self.bithdate.blank?)
+  #   }
+  # end
+  #
+  # def as_json(options = {})
+  #   super(methods: [:to_br], root: false)
+  # end
+#########################33
+#
   #belongs_to :kind, optional: true
 
 
