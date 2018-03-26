@@ -61,3 +61,13 @@ rails db:drop db:create db:migrate dev:setup
 rails db:setup no luga de db:drop e db:create
 
 
+nested atributes é o recurso que permite adicionar um contato já com os telefones, sendo que os telefones foi criado como um model e não como um scaffold
+
+
+params = {contact: {name:"Jack", email: "jack@gmail.com", bithdate: "12/12/12", kind_id: 3}}
+Contact.create(params[:contact])
+
+params = {contact: {name:"1 Jack", email: "jack@gmail.com", bithdate: "12/12/12", kind_id: 3, phones_attributes: [{number: '1214323'}, {number:'21345'}]}}
+Contact.create(params[:contact])
+
+

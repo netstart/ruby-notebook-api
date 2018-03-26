@@ -1,6 +1,7 @@
 class Contact < ApplicationRecord
   belongs_to :kind
   has_many :phones
+  accepts_nested_attributes_for :phones #aceita também os telefones usando NestedAttributes
 
   def as_json(options = {})
     super(include: [:kind, :phones]);
@@ -17,8 +18,8 @@ class Contact < ApplicationRecord
   # def as_json(options = {})
   #   super(methods: [:to_br], root: false)
   # end
-#########################33
-#
+  #########################33
+  #
   #belongs_to :kind, optional: true
 
 
