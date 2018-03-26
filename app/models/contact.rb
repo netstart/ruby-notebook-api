@@ -1,7 +1,7 @@
 class Contact < ApplicationRecord
   belongs_to :kind
   has_many :phones
-  accepts_nested_attributes_for :phones #aceita também os telefones usando NestedAttributes
+  accepts_nested_attributes_for :phones, allow_destroy: true #aceita também os telefones usando NestedAttributes
 
   def as_json(options = {})
     super(include: [:kind, :phones]);
