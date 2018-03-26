@@ -1,6 +1,8 @@
 $ rails new notebook-api --api
 
+##### gera entidade, controller, banco, teste
 $ rails g scaffold Contact name:string email:string bithdate:date
+
 ```
       invoke  active_record
       create    db/migrate/20180320024538_create_contacts.rb
@@ -18,11 +20,23 @@ $ rails g scaffold Contact name:string email:string bithdate:date
 ```
 
 Como criar task dev?
+  gem 'faker'
+
+rails g task dev setup
+rails -T # lista as tasks
 
 rake é depecated, pode usar rails no lugar
 $ rails db:migrate
 $ rails s
 
+
+
+#### Adiciona a controller, banco, entidade Kind e adiciona no contact uma referencia ao kind
+rails g migration add_kind_to_contact kind:references
+rails g scaffold Kind description:string
+
+#### Adicionando model Phone
+rails g model Phone number:string contact:references
 
 
 
@@ -42,8 +56,6 @@ config/environments/development.rb
     
 rails console 
 
-rails g migration add_kind_to_contact kind:references
-rails g scaffold Kind description:string
 
 rails db:drop db:create db:migrate dev:setup
 rails db:setup no luga de db:drop e db:create
