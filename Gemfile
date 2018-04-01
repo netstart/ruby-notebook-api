@@ -34,6 +34,8 @@ group :development, :test do
   gem 'pry-rails'
 
   gem 'faker'
+
+  gem 'rack-cors'
 end
 
 group :development do

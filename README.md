@@ -71,3 +71,10 @@ params = {contact: {name:"1 Jack", email: "jack@gmail.com", bithdate: "12/12/12"
 Contact.create(params[:contact])
 
 
+#### cors
+gem 'rack-cors'
+
+
+#### Pode ser usado para testar requisições externas
+resttesttest.com
+
