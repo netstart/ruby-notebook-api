@@ -38,7 +38,9 @@ rails g scaffold Kind description:string
 #### Adicionando model Phone
 rails g model Phone number:string contact:references
 
-
+####  Active model  serializer ->   gem 'active_model_serializers'
+rails g serializer contact
+rails g serializer kind
 
 Para fazer bind quando está em um vagrant
 
@@ -77,4 +79,7 @@ gem 'rack-cors'
 
 #### Pode ser usado para testar requisições externas
 resttesttest.com
+
+ #### Especificação para construir API json
+jsonapi.org
 
